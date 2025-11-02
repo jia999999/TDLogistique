@@ -25,6 +25,7 @@
             position: sticky;
             top: 0;
             z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         
         nav .container {
@@ -40,6 +41,10 @@
             font-size: 1.5rem;
         }
         
+        nav h1 img {
+            display: block;
+        }
+        
         nav ul {
             list-style: none;
             display: flex;
@@ -47,13 +52,14 @@
         }
         
         nav a {
-            color: white;
+            color: #000000;
             text-decoration: none;
             transition: color 0.3s;
+            font-weight: 500;
         }
         
         nav a:hover {
-            color: #3498db;
+            color: #667eea;
         }
         
         /* Hero Section */
@@ -187,9 +193,33 @@
         
         /* Mobile Menu */
         @media (max-width: 768px) {
+            nav {
+                padding: 0.5rem 0;
+            }
+            
+            nav .container {
+                padding: 0 15px;
+            }
+            
+            nav h1 img {
+                width: 70px;
+            }
+            
+            /* Cacher tous les liens sauf "Demande de devis" */
+            nav ul li:not(:last-child) {
+                display: none;
+            }
+            
             nav ul {
-                flex-direction: column;
-                gap: 1rem;
+                gap: 0;
+            }
+            
+            nav ul li a {
+                font-size: 0.9rem;
+                padding: 8px 15px;
+                background: #667eea;
+                color: white;
+                border-radius: 5px;
             }
             
             .hero h2 {
@@ -212,7 +242,7 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#apropos">À propos</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="devis.html">Demande de devis</a></li>
+                <li><a href="form.html">Demande de devis</a></li>
             </ul>
         </div>
     </nav>
@@ -221,7 +251,7 @@
     <section class="hero" id="accueil">
         <h2>Bienvenue chez TDLogistique</h2>
         <p>Votre partenaire de confiance pour la livraison personalisée</p>
-        <a href="devis.html" class="btn">Demander un devis</a>
+        <a href="form.html" class="btn">Demander un devis</a>
     </section>
 
     <!-- Services Section -->
@@ -267,11 +297,11 @@
                 </div>
                 <div class="contact-card">
                     <h3>📞Téléphone</h3>
-                    <p><a href="tel:+33123456789">07 82 37 85 81</a></p>
+                    <p><a href="tel:+33782378581">07 82 37 85 81</a></p>
                 </div>
                 <div class="contact-card">
                     <h3>✉️Email</h3>
-                    <p><a href="tdlogistique@gmail.com">contact@exemple.fr</a></p>
+                    <p><a href="mailto:tdlogistique@gmail.com">tdlogistique@gmail.com</a></p>
                 </div>
             </div>
         </div>
@@ -279,7 +309,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Mon Entreprise. Tous droits réservés.</p>
+        <p>&copy; 2025 TDLogistique. Tous droits réservés.</p>
     </footer>
 </body>
 </html>
