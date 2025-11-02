@@ -41,6 +41,11 @@
             transition: all 0.3s ease;
         }
         
+        nav.scrolled {
+            padding: 0.8rem 0;
+            box-shadow: 0 2px 30px rgba(0,0,0,0.12);
+        }
+        
         nav .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -51,8 +56,12 @@
         }
         
         nav .logo img {
-            height: 60px;
+            height: 70px;
             transition: height 0.3s ease;
+        }
+        
+        nav.scrolled .logo img {
+            height: 55px;
         }
         
         nav ul {
@@ -70,7 +79,7 @@
             position: relative;
         }
         
-        nav a::after {
+        nav a:not(.btn-nav)::after {
             content: '';
             position: absolute;
             bottom: -5px;
@@ -81,8 +90,23 @@
             transition: width 0.3s ease;
         }
         
-        nav a:hover::after {
+        nav a:not(.btn-nav):hover::after {
             width: 100%;
+        }
+        
+        .btn-nav {
+            background: var(--primary-blue);
+            color: var(--white) !important;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-nav:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 146, 255, 0.3);
         }
         
         /* Mobile Menu Toggle */
@@ -104,7 +128,7 @@
         /* Form Container */
         .form-container {
             max-width: 800px;
-            margin: 120px auto 60px;
+            margin: 130px auto 60px;
             padding: 0 30px;
         }
         
@@ -260,12 +284,12 @@
             background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-blue) 100%);
             color: var(--white);
             text-align: center;
-            padding: 2rem 30px;
+            padding: 2.5rem 30px;
             margin-top: 3rem;
         }
         
         footer p {
-            font-size: 1rem;
+            font-size: 1.05rem;
             opacity: 0.9;
         }
         
@@ -304,10 +328,10 @@
             
             nav ul {
                 position: fixed;
-                top: 92px;
+                top: 96px;
                 left: -100%;
                 width: 100%;
-                height: calc(100vh - 92px);
+                height: calc(100vh - 96px);
                 background: var(--white);
                 flex-direction: column;
                 justify-content: flex-start;
@@ -328,12 +352,16 @@
                 border-bottom: 1px solid #eee;
             }
             
-            nav a::after {
+            nav a:not(.btn-nav)::after {
                 display: none;
             }
             
+            .btn-nav {
+                margin-top: 1rem;
+            }
+            
             .form-container {
-                margin: 100px auto 40px;
+                margin: 110px auto 40px;
                 padding: 0 20px;
             }
             
@@ -386,6 +414,7 @@
                 <li><a href="index.html#services">Services</a></li>
                 <li><a href="index.html#apropos">À propos</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="form.html" class="btn-nav">Demande de devis</a></li>
             </ul>
         </div>
     </nav>
@@ -495,6 +524,16 @@
                     navMenu.classList.remove('active');
                 }
             });
+        });
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
         });
         
         // Form Submission
