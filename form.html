@@ -438,67 +438,65 @@
             
             <form id="devisForm" action="https://formsubmit.co/jamagnaudet2@gmail.com" method="POST">
                 <!-- Configuration Formsubmit -->
-                <input type="hidden" name="_subject" value="Nouvelle Demande de Devis - TDLogistique">
-                <input type="hidden" name="_template" value="box">
+                <input type="hidden" name="_subject" value="Nouvelle Demande de Devis TDLogistique">
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_next" value="https://jia999999.github.io/TDLogistique/form.html?success=true">
-                <input type="hidden" name="_autoresponse" value="Merci pour votre demande ! Nous vous contacterons dans les plus brefs délais.">
                 
                 <div class="form-row">
                     <div class="form-group">
                         <label for="nom">Nom <span class="required">*</span></label>
-                        <input type="text" id="nom" name="👤 Nom du client" required>
+                        <input type="text" id="nom" name="Nom" required>
                     </div>
                     
                     <div class="form-group">
                         <label for="prenom">Prénom <span class="required">*</span></label>
-                        <input type="text" id="prenom" name="👤 Prénom du client" required>
+                        <input type="text" id="prenom" name="Prénom" required>
                     </div>
                 </div>
                 
                 <div class="form-row">
                     <div class="form-group">
                         <label for="email">Email <span class="required">*</span></label>
-                        <input type="email" id="email" name="📧 Adresse email" required>
+                        <input type="email" id="email" name="Email" required>
                     </div>
                     
                     <div class="form-group">
                         <label for="telephone">Téléphone <span class="required">*</span></label>
-                        <input type="tel" id="telephone" name="📞 Numéro de téléphone" required>
+                        <input type="tel" id="telephone" name="Téléphone" required>
                     </div>
                 </div>
                 
                 <div class="form-group">
                     <label for="service">Type de service <span class="required">*</span></label>
-                    <select id="service" name="🚚 Service demandé" required>
+                    <select id="service" name="Service demandé" required>
                         <option value="">-- Sélectionnez un service --</option>
-                        <option value="🚚 Livraison">🚚 Livraison</option>
-                        <option value="📦 Déménagement">📦 Déménagement</option>
-                        <option value="🏗️ Transport de Matériaux">🏗️ Transport de Matériaux</option>
-                        <option value="❓ Autre">❓ Autre</option>
+                        <option value="Livraison">Livraison</option>
+                        <option value="Déménagement">Déménagement</option>
+                        <option value="Transport de Matériaux">Transport de Matériaux</option>
+                        <option value="Autre service">Autre service</option>
                     </select>
                 </div>
                 
                 <div class="form-row">
                     <div class="form-group">
                         <label for="adresse-depart">Adresse de départ <span class="required">*</span></label>
-                        <input type="text" id="adresse-depart" name="📍 Point de départ" required>
+                        <input type="text" id="adresse-depart" name="Adresse de départ" required>
                     </div>
                     
                     <div class="form-group">
                         <label for="adresse-arrivee">Adresse d'arrivée <span class="required">*</span></label>
-                        <input type="text" id="adresse-arrivee" name="📍 Point d'arrivée" required>
+                        <input type="text" id="adresse-arrivee" name="Adresse d'arrivée" required>
                     </div>
                 </div>
                 
                 <div class="form-group">
                     <label for="date-souhaitee">Date souhaitée</label>
-                    <input type="date" id="date-souhaitee" name="📅 Date souhaitée pour l'intervention">
+                    <input type="date" id="date-souhaitee" name="Date souhaitée">
                 </div>
                 
                 <div class="form-group">
                     <label for="details">Détails de votre demande</label>
-                    <textarea id="details" name="📝 Informations complémentaires" placeholder="Décrivez votre besoin (volume, poids, étages, etc.)..."></textarea>
+                    <textarea id="details" name="Détails" placeholder="Décrivez votre besoin (volume, poids, étages, etc.)..."></textarea>
                 </div>
                 
                 <button type="submit" class="btn-submit">Envoyer ma demande</button>
