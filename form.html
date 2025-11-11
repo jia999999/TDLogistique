@@ -38,12 +38,6 @@
             width: 100%;
             z-index: 1000;
             box-shadow: 0 2px 20px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-        }
-        
-        nav.scrolled {
-            padding: 0.8rem 0;
-            box-shadow: 0 2px 30px rgba(0,0,0,0.12);
         }
         
         nav .container {
@@ -57,72 +51,22 @@
         
         nav .logo img {
             height: 70px;
-            transition: height 0.3s ease;
         }
         
-        nav.scrolled .logo img {
-            height: 55px;
-        }
-        
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 2.5rem;
-            align-items: center;
-        }
-        
-        nav a {
-            color: var(--text-dark);
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-weight: 500;
-            position: relative;
-        }
-        
-        nav a:not(.btn-nav)::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
+        .btn-back {
             background: var(--primary-blue);
-            transition: width 0.3s ease;
-        }
-        
-        nav a:not(.btn-nav):hover::after {
-            width: 100%;
-        }
-        
-        .btn-nav {
-            background: var(--primary-blue);
-            color: var(--white) !important;
+            color: var(--white);
             padding: 10px 25px;
             border-radius: 25px;
+            text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
         }
         
-        .btn-nav:hover {
+        .btn-back:hover {
             background: var(--primary-dark);
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0, 146, 255, 0.3);
-        }
-        
-        /* Mobile Menu Toggle */
-        .menu-toggle {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 5px;
-        }
-        
-        .menu-toggle span {
-            width: 28px;
-            height: 3px;
-            background: var(--primary-dark);
-            border-radius: 3px;
-            transition: all 0.3s ease;
         }
         
         /* Form Container */
