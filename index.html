@@ -307,15 +307,6 @@
             transform: scale(1.1) rotateY(360deg);
         }
 
-        .service-icon-mirror {
-            transform: scaleX(-1);
-            display: inline-block;
-        }
-
-        .service-card:hover .service-icon-mirror {
-            transform: scaleX(-1) scale(1.1) rotateY(360deg);
-        }
-        
         .service-card h3 {
             color: var(--primary-dark);
             margin-bottom: 1rem;
@@ -654,7 +645,9 @@
             <p class="section-subtitle">Des solutions logistiques complètes adaptées à tous vos besoins</p>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon service-icon-mirror">🚚</div>
+                    <div class="service-icon">
+                        <img src="images/CamionTDL2.png" alt="Camion de livraison" height="50">
+                    </div>
                     <h3>Emballage, Livraison et Installation</h3>
                     <p>Nous prenons en charge tout le processus, de l’emballage à l’installation finale, avec rapidité, sécurité et qualité. Une solution clé en main, fiable et professionnelle.</p>
                 </div>
