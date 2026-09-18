@@ -306,6 +306,15 @@
         .service-card:hover .service-icon {
             transform: scale(1.1) rotateY(360deg);
         }
+
+        .service-icon-mirror {
+            transform: scaleX(-1);
+            display: inline-block;
+        }
+
+        .service-card:hover .service-icon-mirror {
+            transform: scaleX(-1) scale(1.1) rotateY(360deg);
+        }
         
         .service-card h3 {
             color: var(--primary-dark);
@@ -645,7 +654,7 @@
             <p class="section-subtitle">Des solutions logistiques complètes adaptées à tous vos besoins</p>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">🚚</div>
+                    <div class="service-icon service-icon-mirror">🚚</div>
                     <h3>Emballage, Livraison et Installation</h3>
                     <p>Nous prenons en charge tout le processus, de l’emballage à l’installation finale, avec rapidité, sécurité et qualité. Une solution clé en main, fiable et professionnelle.</p>
                 </div>
@@ -724,12 +733,15 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 TDLogistique. Tous droits réservés.</p>
+                <p>&copy; <span id="currentYear">2025</span> TDLogistique. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
 
     <script>
+        // Année du copyright à jour automatiquement
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
         // Mobile Menu Toggle
         const menuToggle = document.getElementById('menuToggle');
         const navMenu = document.getElementById('navMenu');
