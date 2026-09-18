@@ -437,10 +437,13 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 TDLogistique. Tous droits réservés.</p>
+        <p>&copy; <span id="currentYear">2025</span> TDLogistique. Tous droits réservés.</p>
     </footer>
 
     <script>
+        // Année du copyright à jour automatiquement
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
         // Gestion du message de succès (après redirection)
         window.addEventListener('DOMContentLoaded', () => {
             const urlParams = new URLSearchParams(window.location.search);

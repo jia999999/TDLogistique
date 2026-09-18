@@ -239,7 +239,11 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 TDLogistique. Tous droits réservés.</p>
+        <p>&copy; <span id="currentYear">2025</span> TDLogistique. Tous droits réservés.</p>
     </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
