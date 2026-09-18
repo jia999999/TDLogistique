@@ -637,6 +637,16 @@
         .contact-info .reveal:nth-child(3) {
             transition-delay: 0.3s;
         }
+
+        /* section-title already uses transform for centering (left: 50% + translateX(-50%)),
+           so its reveal animation must keep that translateX or it loses its centering */
+        h2.section-title.reveal {
+            transform: translateX(-50%) translateY(30px);
+        }
+
+        h2.section-title.reveal.visible {
+            transform: translateX(-50%) translateY(0);
+        }
     </style>
 </head>
 <body>
