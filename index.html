@@ -9,6 +9,9 @@
     <meta property="og:image" content="images/LOGO TDL FOND BLANC.png">
     <meta property="og:type" content="website">
     <link rel="icon" type="image/png" href="images/LOGO TDL FOND BLANC.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <title>TDLogistique - Accueil</title>
     <style>
         * {
@@ -28,7 +31,7 @@
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: var(--text-dark);
             overflow-x: hidden;
@@ -301,6 +304,7 @@
             margin-bottom: 1.5rem;
             display: inline-block;
             transition: transform 0.4s ease;
+            color: var(--primary-blue);
         }
         
         .service-card:hover .service-icon {
@@ -605,6 +609,34 @@
         .menu-toggle.active span:nth-child(3) {
             transform: rotate(-45deg) translate(8px, -8px);
         }
+
+        /* Scroll Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .services-grid .reveal:nth-child(2) {
+            transition-delay: 0.15s;
+        }
+
+        .services-grid .reveal:nth-child(3) {
+            transition-delay: 0.3s;
+        }
+
+        .contact-info .reveal:nth-child(2) {
+            transition-delay: 0.15s;
+        }
+
+        .contact-info .reveal:nth-child(3) {
+            transition-delay: 0.3s;
+        }
     </style>
 </head>
 <body>
@@ -641,23 +673,40 @@
     <!-- Services Section -->
     <section id="services">
         <div class="container">
-            <h2 class="section-title">Nos Services</h2>
-            <p class="section-subtitle">Des solutions logistiques complètes adaptées à tous vos besoins</p>
+            <h2 class="section-title reveal">Nos Services</h2>
+            <p class="section-subtitle reveal">Des solutions logistiques complètes adaptées à tous vos besoins</p>
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card reveal">
                     <div class="service-icon">
                         <img src="images/CamionTDL.png" alt="Camion de livraison" height="50">
                     </div>
                     <h3>Emballage, Livraison et Installation</h3>
                     <p>Nous prenons en charge tout le processus, de l’emballage à l’installation finale, avec rapidité, sécurité et qualité. Une solution clé en main, fiable et professionnelle.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">📦</div>
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line>
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                    </div>
                     <h3>Prise en charge de colis</h3>
                     <p>Transport flexible et sécurisé pour tous types d’envois, avec dépôt ou collecte à domicile, suivi précis et remise au destinataire.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">💪</div>
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 3h5v14H4z"></path>
+                            <path d="M4 3v14"></path>
+                            <path d="M6 6h1"></path>
+                            <circle cx="6.5" cy="20" r="1.5"></circle>
+                            <circle cx="15" cy="20" r="1.5"></circle>
+                            <path d="M6.5 17.5h9"></path>
+                            <path d="M9 10h6v7.5H9z"></path>
+                        </svg>
+                    </div>
                     <h3>Manutention</h3>
                     <p>Manutention et installation assurées par des équipes qualifiées, efficaces et respectant les normes de sécurité, pour particuliers et entreprises.</p>
                 </div>
@@ -668,17 +717,17 @@
     <!-- About Section -->
     <section class="about" id="apropos">
         <div class="container">
-            <h2 class="section-title">À propos</h2>
-            <p class="section-subtitle">Une expertise au service de votre satisfaction</p>
+            <h2 class="section-title reveal">À propos</h2>
+            <p class="section-subtitle reveal">Une expertise au service de votre satisfaction</p>
             <div class="about-content">
-                <div class="about-text">
+                <div class="about-text reveal">
                     <h3>Notre engagement</h3>
                     <p>TDLogistique s'engage à fournir des services de transport et de logistique de qualité supérieure. Notre équipe expérimentée met tout en œuvre pour assurer la satisfaction de nos clients.</p>
                     <p>Avec une approche personnalisée et des solutions adaptées à chaque besoin, nous sommes votre partenaire de confiance pour tous vos projets de transport et de déménagement.</p>
                     <p>Notre priorité : votre tranquillité d'esprit et la sécurité de vos biens.</p>
                 </div>
                 
-                <div class="about-image">
+                <div class="about-image reveal">
                     <img src="images/matelas camion.jpg" alt="TDLogistique">
                 </div>
             </div>
@@ -688,20 +737,20 @@
     <!-- Contact Section -->
     <section id="contact">
         <div class="container">
-            <h2 class="section-title">Contact</h2>
-            <p class="section-subtitle">Une question, un projet ? Contactez-nous, nous vous répondrons rapidement</p>
+            <h2 class="section-title reveal">Contact</h2>
+            <p class="section-subtitle reveal">Une question, un projet ? Contactez-nous, nous vous répondrons rapidement</p>
             <div class="contact-info">
-                <div class="contact-card">
+                <div class="contact-card reveal">
                     <div class="contact-icon">📍</div>
                     <h3>Adresse</h3>
                     <p>13 Rue des Verdiers<br>66700 Argelès-sur-Mer<br>France</p>
                 </div>
-                <div class="contact-card">
+                <div class="contact-card reveal">
                     <div class="contact-icon">📞</div>
                     <h3>Téléphone</h3>
                     <p><a href="tel:+33782378581">07 82 37 85 81</a></p>
                 </div>
-                <div class="contact-card">
+                <div class="contact-card reveal">
                     <div class="contact-icon">✉️</div>
                     <h3>Email</h3>
                     <p><a href="mailto:tdlogistique@gmail.com">tdlogistique@gmail.com</a></p>
@@ -780,6 +829,18 @@
                 }
             });
         });
+
+        // Scroll Reveal Animation
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
     </script>
 </body>
 </html>
