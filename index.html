@@ -69,11 +69,23 @@
             height: 70px;
             transition: height 0.3s ease;
         }
-        
+
         nav.scrolled .logo img {
             height: 55px;
         }
-        
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
         nav ul {
             list-style: none;
             display: flex;
@@ -553,11 +565,7 @@
             nav a:not(.btn-nav)::after {
                 display: none;
             }
-            
-            .btn-nav {
-                margin-top: 1rem;
-            }
-            
+
             .hero {
                 padding: 140px 20px 80px;
                 margin-top: 82px;
@@ -655,21 +663,25 @@
     <!-- Navigation -->
     <nav id="navbar">
         <div class="container">
-            <div class="logo">
-                <img src="images/LOGO TDL FOND BLANC.png" alt="TDLogistique Logo">
+            <div class="nav-left">
+                <div class="logo">
+                    <img src="images/LOGO TDL FOND BLANC.png" alt="TDLogistique Logo">
+                </div>
+                <ul id="navMenu">
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#apropos">À propos</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </div>
-            <div class="menu-toggle" id="menuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="nav-right">
+                <a href="form.html" class="btn-nav">Demande de devis</a>
+                <div class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-            <ul id="navMenu">
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#apropos">À propos</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="form.html" class="btn-nav">Demande de devis</a></li>
-            </ul>
         </div>
     </nav>
 
